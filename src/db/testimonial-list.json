@@ -1,0 +1,34 @@
+[
+    {
+        "id" : 1,
+        "img" : "img-1",
+        "fullName" : "Jhon Deo",
+        "jobTitle" : "Senior Developer",
+        "twitterHandle" : "@jhondeo",
+        "text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eaque laudantium error maxime laborum incidunt, quas quasi necessitatibus officia nam ullam quaerat quae similique aspernatur sapiente aperiam reprehenderit veniam sunt."
+    },
+    {
+        "id" : 2,
+        "img" : "img-2",
+        "fullName" : "Jeff Deo",
+        "jobTitle" : "Front-End Developer",
+        "twitterHandle" : "@jeffdeo",
+        "text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eaque laudantium error maxime laborum incidunt, quas quasi necessitatibus officia nam ullam quaerat quae similique aspernatur sapiente aperiam reprehenderit veniam sunt."
+    },
+    {
+        "id" : 3,
+        "img" : "img-3",
+        "fullName" : "Jane Norris",
+        "jobTitle" : "Back-End Developer",
+        "twitterHandle" : "@janedeo",
+        "text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eaque laudantium error maxime laborum incidunt, quas quasi necessitatibus officia nam ullam quaerat quae similique aspernatur sapiente aperiam reprehenderit veniam sunt."
+    },
+    {
+        "id" : 4,
+        "img" : "img-4",
+        "fullName" : "Jennifer Deo",
+        "jobTitle" : "Tester",
+        "twitterHandle" : "@jenniferdeo",
+        "text" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur eaque laudantium error maxime laborum incidunt, quas quasi necessitatibus officia nam ullam quaerat quae similique aspernatur sapiente aperiam reprehenderit veniam sunt."
+    }
+]

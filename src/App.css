@@ -144,7 +144,17 @@ form .btn {
   color: #fff;
   margin-right: 1.5rem;
 }
-
+.fadeIn{
+  animation: fadeIn 1s ease-in-out;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 @keyframes fadeInHeader {
   0% {
     opacity: 0;
@@ -207,7 +217,7 @@ form .btn {
   text-align: center;
 }
 
-.categories-container .card i {
+.categories-container .card .icon {
   font-size: 4rem;
   border-radius: 10%;
   padding: 0.5rem;
@@ -216,48 +226,48 @@ form .btn {
   transition: var(--transition);
 }
 
-.categories-container .card i:hover {
+.categories-container .card .icon:hover {
   background-color: #fff;
   transition: var(--transition);
 }
 
-.categories-container .card i:hover.fa-html5 {
+.categories-container .card .icon:hover.html5 {
   color: var(--html-color);
 }
 
-.categories-container .card i:hover.fa-css3 {
+.categories-container .card .icon:hover.css3 {
   color: var(--css-color);
 }
 
-.categories-container .card i:hover.fa-js {
+.categories-container .card .icon:hover.js {
   color: var(--js-color);
 }
 
-.categories-container .card i:hover.fa-python {
+.categories-container .card .icon:hover.python {
   color: var(--python-color);
 }
 
-.categories-container .card i:hover.fa-java {
+.categories-container .card .icon:hover.java {
   color: var(--java-color);
 }
 
-.categories-container .card i:hover.fa-react {
+.categories-container .card .icon:hover.react {
   color: var(--react-color);
 }
 
-.categories-container .card i:hover.fa-r-project {
+.categories-container .card .icon:hover.r-project {
   color: var(--r-color);
 }
 
-.categories-container .card i:hover.fa-file-excel {
+.categories-container .card .icon:hover.file-excel {
   color: var(--microsoft-excel-color);
 }
 
-.categories-container .card i:hover.fa-people-group {
+.categories-container .card .icon:hover.people-group {
   color: var(--microsoft-teams-color);
 }
 
-.categories-container .card i:hover.fa-database {
+.categories-container .card .icon:hover.database {
   color: var(--sql-color);
 }
 
@@ -279,8 +289,8 @@ form .btn {
   transition: 0.3s ease-out;
 }
 
-.offers-container .card i,
-.testimonials-container .card i {
+.offers-container .card .i,
+.testimonials-container .card .i {
   font-size: 4rem;
   background-color: var(--secondary-color);
   color: #fff;
@@ -366,20 +376,20 @@ form .btn {
 }
 
 .testimonials-container .card-img.img-1 {
-  /* background: url("./img/testimonial-1.jpg") no-repeat center center/cover; */
+  background: url("./img/testimonial-1.jpg") no-repeat center center/cover;
 }
 
 .testimonials-container .card-img.img-2 {
-  /* background: url("./img/testimonial-2.jpg") no-repeat center top/cover; */
+  background: url("./img/testimonial-2.jpg") no-repeat center top/cover;
 }
 
 .testimonials-container .card-img.img-3 {
-  /* background: url("./img/testimonial-3.jpg") no-repeat center top/cover; */
+  background: url("./img/testimonial-3.jpg") no-repeat center top/cover;
   background-size: 150%;
 }
 
 .testimonials-container .card-img.img-4 {
-  /* background: url("./img/testimonial-4.jpg") no-repeat center top/cover; */
+  background: url("./img/testimonial-4.jpg") no-repeat center top/cover;
   background-size: 120%;
 }
 /* todo: Update testimonial */
@@ -411,6 +421,14 @@ form .btn {
   .testimonials-container .card {
     width: 350px;
   }
+}
+
+.goToTopArrow{
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  font-size: 2rem;
+  color: #7633f9;
 }
 
 /* Welcome */
