@@ -27,6 +27,7 @@ import TestimonialCard from './components/page-components/TestimonialCard';
 import TestimonialsList from './components/List/TestimonialsList';
 import UseEffectHooks from './Examples/UseEffectHooks';
 import UseRefEx from './Examples/UseRefEx';
+import LoginForm from './components/page-components/LoginForm';
 
 
 
@@ -43,6 +44,11 @@ function App() {
   // Reference
   const offersRef = useRef();
   const topRef = useRef();
+  // Form State
+  const [forms , setForms] = useState({
+    LoginForm:false,
+  });
+
   // Handlers
   // Modal Handlers
   function handleStartLearningEvent() {
@@ -63,6 +69,17 @@ function App() {
     offersRef.current.scrollIntoView({behavior:"smooth"})
   }
 
+  // form handle
+  const handleShowLoginForm =() => {
+    setForms({...forms , LoginForm:true})
+
+  }
+
+  const handleCancelLoginForm = () => { 
+    setForms({...forms , LoginForm:false})
+    
+  }
+
 // offers List
 
 const offerList = [
@@ -80,7 +97,7 @@ const offerList = [
   {
     icon_1:<FaFileDownload className='i' size={"2em"}/>,
     title:"Project Fills Download",
-    text:"File from project are available for all of our course to be downloaded  "
+    text:"File from project are available for all of our course to be downloaded."
   }
 ]
 
@@ -271,9 +288,14 @@ useEffect(() => {
        {showCourseModel && <Modal title={"Access denied"}
           text={"Please login in order to get Access this content"}
           cancelEvent={handleModalCancleEvent}
+          loginEvent={handleShowLoginForm}
         />}
       {/* Go to top arrow */}
       {goToTopArrow && <BsArrowUpCircleFill className='goToTopArrow' onClick={handleGoToTop}/>}
+      {/* Forms */}
+      {/* Login Form */}
+      
+      {forms.LoginForm && <div className="modal"><LoginForm handleCancel={handleCancelLoginForm} /></div>}
       {/* {Examples} */}
        {/* <UseStateHooksEx/> */}
        {/* <Mylist/> */}

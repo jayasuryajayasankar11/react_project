@@ -1,5 +1,8 @@
 body {
   font-family: "Poppins", sans-serif;
+  max-width: 1440px;
+
+  
 }
 
 a {
@@ -79,6 +82,18 @@ a {
   color: #000;
 }
 
+.form{
+  position: fixed;
+  top: 0;
+  left: 35%;
+  /* transform: translate(-50%, -50%); */
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  
+}
+
 form .btn {
   color: #eee;
 }
@@ -121,7 +136,7 @@ form .btn {
 }
 
 .header {
-  height: 80vh;
+  height: 100vh;
   animation: fadeInHeader 1s ease-in-out;
 }
 
