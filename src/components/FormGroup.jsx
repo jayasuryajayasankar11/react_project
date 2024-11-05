@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function FormGroup(
     {lable , type , placeholder ,disabled = false,
-        value , onChange
+        value , onChange , reference
     }) {
     return (
         <div className="form-group">
@@ -13,7 +13,8 @@ export default function FormGroup(
             placeholder={placeholder} 
             disabled={disabled} 
             value={value}
-            onChange={onChange}/>
+            onChange={onChange}
+            ref={reference}/>
         </div>
     )
 }
