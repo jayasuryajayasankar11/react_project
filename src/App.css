@@ -10,11 +10,11 @@ a {
 }
 
 .title {
-  font-size: 5rem;
+  font-size: 3rem;
 }
 
 .subtitle {
-  font-size: 3.5rem;
+  font-size: 2rem;
 }
 
 :root {
@@ -84,8 +84,9 @@ a {
 
 .form{
   position: fixed;
-  top: 0;
-  left: 35%;
+ width: 450px;
+
+  margin: auto;
   /* transform: translate(-50%, -50%); */
   background-color: #fff;
   padding: 20px;
@@ -545,7 +546,8 @@ p {
   }
   .header-btn {
     display: flex;
-    justify-content: space-around;
+    max-width: 500px;
+    justify-content: space-between;
   }
   .offers-container,
   .testimonials-container,
@@ -581,12 +583,14 @@ p {
   background-color: rgba(0, 0, 0, 0.5);
   display: block;
   z-index: 100;
+ 
 }
 
 .modal-content {
   position: absolute;
   top: 50%;
   left: 50%;
+  border-radius: 10px;
   transform: translate(-50%, -50%);
   background-color: #fff;
   padding: 20px;
