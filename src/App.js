@@ -29,6 +29,7 @@ import UseEffectHooks from './Examples/UseEffectHooks';
 import UseRefEx from './Examples/UseRefEx';
 import LoginForm from './components/page-components/LoginForm';
 import RegistrationForm from './components/page-components/RegistrationForm';
+import ThrowError from './Examples/ThrowError';
 
 
 
@@ -338,6 +339,7 @@ function App() {
       {/* <Mylist/> */}
       {/* <UseEffectHooks/> */}
       {/* <UseRefEx/> */}
+      {/* <ThrowError/> */}
     </div>
   );
 }
