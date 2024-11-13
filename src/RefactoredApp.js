@@ -1,7 +1,9 @@
 
 import './App.css';
 //hooks
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect , useContext} from 'react';
+// Context
+import { ThemeContext } from './Context/ThemeContext';
 //icons
 import { BsArrowUpCircleFill } from 'react-icons/bs';
 
@@ -36,7 +38,12 @@ function App() {
     RegistrationForm: false,
   });
 
-  const [login, setLogin] = useState(false)
+  const [login, setLogin] = useState(false);
+
+  // Go to top arrow context
+
+  const { theme } = useContext(ThemeContext);
+
 
   // Handlers
   // Modal Handlers
@@ -150,7 +157,11 @@ function App() {
         loginEvent={!login && handleShowLoginForm}
       />}
       {/* Go to top arrow */}
-      {goToTopArrow && <BsArrowUpCircleFill className='goToTopArrow' onClick={handleGoToTop} />}
+      {goToTopArrow && (<BsArrowUpCircleFill 
+      className='goToTopArrow' 
+      onClick={handleGoToTop} 
+      color={theme === "dark" && "#ff9800"}
+      />)}
 
       {/* Forms */}
       {/* Login Form */}

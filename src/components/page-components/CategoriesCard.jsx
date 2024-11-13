@@ -1,10 +1,14 @@
 import React from 'react'
 import Button from '../Button'
+import { useContext } from 'react'
+import { ThemeContext } from '../../Context/ThemeContext'
 
 export default function CategoriesCard({  title,text,icon_1,icon_2,icon_3,btnIcon,startLearningEvent,
     cardHeader = true,  children ,cardFooter =true}) {
+      const {theme} = useContext(ThemeContext);
   return (
-    <div className='card' style={{maxWidth: 400}}>
+    // <div className='card' style={{maxWidth: 400}}>
+    <div className={`card card-${theme}`} style={{maxWidth: 400}}>
     {cardHeader && <div className='card-header'>
         {icon_1}
         {icon_2}

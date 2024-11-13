@@ -5,6 +5,9 @@ import Title from '../Title'
 import Offerscard from '../page-components/Offerscard'
 
 import { offerList , moreOfferList } from '../../db/OffersList'
+// Context
+import { useContext } from 'react'
+import { ThemeContext } from '../../Context/ThemeContext'
 
 
 
@@ -13,11 +16,16 @@ export default function Offers(
         showOffers,
         handleShowOffers
     }) {
+
+      // Context
+      const {theme} = useContext(ThemeContext);
   return (
     <section ref={offersRef} className="offers container container-md p-2">
             <Title classes={"subtitle text-center mb-4"}
               text={"Here's what you get"} />
-            <div className="offers-container" >
+              {/* context */}
+            {/* <div className="offers-container" > */}
+            <div className={`offers-container ${theme}`} >
              
               {offerList.map((offer, index) => (
                 <Offerscard
@@ -30,7 +38,9 @@ export default function Offers(
               ))}
             </div>
 
-            {showOffers && (<div className="offers-container fadeIn" >
+            {showOffers && (
+              // <div className="offers-container fadeIn" >
+              <div className={`offers-container ${theme}`} >
               {moreOfferList.map((offer, index) => (
                 <Offerscard
                   key={index}

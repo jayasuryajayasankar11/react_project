@@ -33,6 +33,20 @@ a {
   --sql-color: #a5a5a5;
 }
 
+/* Themes */
+
+.light-theme {
+  background-color: #fff;
+  color: #000;
+}
+
+.dark-theme {
+  background-color: #000;
+  color: #fff;
+}
+
+
+
 /* Navigation */
 .navbar {
   width: 100%;
@@ -52,6 +66,14 @@ a {
   color: var(--primary-color);
   padding: 0.6rem 0.3rem;
   border-radius: 50%;
+  transition: all 0.25s ease-in-out;
+}
+
+.navbar-brand .logo:hover {
+
+  background-color: #000;
+  color: var(--primary-color);
+  cursor: pointer;
 }
 
 .navbar-nav {
@@ -290,6 +312,17 @@ form .btn {
 .categories-container .card:hover {
   transform: translateY(-10px);
   transition: var(--transition);
+}
+
+.offers-container{
+  background-color: #eee;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.offers-container.dark{
+  background-color: #000;
 }
 
 .offers-container,

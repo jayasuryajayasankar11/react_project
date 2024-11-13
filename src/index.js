@@ -11,21 +11,43 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 // routes
 import Root from './routes/root';
 import Home from './routes/Home';
+import About from './routes/about';
+import Index from './routes/index';
+import Login from './routes/Login';
+import Register from './routes/Register';
+import FruitsApp from './Examples/Context/FruitsApp';
+import ThemeWrapper from './Context/ThemeWrapper';
 // create router
 const router = createBrowserRouter([
   {
     path: "/",
     // element: <RefactoredApp />
-    element : <Root/>,
-    errorElement :<ErrorPage/>,
-    children : [
+    element: <Root />,
+    errorElement: <ErrorPage />,
+    children: [
       {
-        path : "home" ,
-        element : <Home/>,
+        index: true,
+        element: <Index />
       },
       {
-        path : "Contact" ,
-        element : <Contact/>,
+        path: "home",
+        element: <Home />,
+      },
+      {
+        path: "about",
+        element: <About />
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+      {
+        path: "login",
+        element: <Login />
+      },
+      {
+        path: "register",
+        element: <Register />
       }
     ]
   },
@@ -41,10 +63,16 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    {/* <RefactoredApp /> */}
-    <RouterProvider router={router} />
-  </React.StrictMode>
+
+  <ThemeWrapper>
+
+    <React.StrictMode>
+      {/* <RefactoredApp /> */}
+      <RouterProvider router={router} />
+      {/* <FruitsApp/> */}
+    </React.StrictMode>
+
+  </ThemeWrapper>
 );
 
 
