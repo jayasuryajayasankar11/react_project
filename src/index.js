@@ -17,6 +17,7 @@ import Login from './routes/Login';
 import Register from './routes/Register';
 import FruitsApp from './Examples/Context/FruitsApp';
 import ThemeWrapper from './Context/ThemeWrapper';
+import StyledComponent from './Examples/StyledComponent';
 // create router
 const router = createBrowserRouter([
   {
@@ -70,6 +71,7 @@ root.render(
       {/* <RefactoredApp /> */}
       <RouterProvider router={router} />
       {/* <FruitsApp/> */}
+      {/* <StyledComponent/> */}
     </React.StrictMode>
 
   </ThemeWrapper>
